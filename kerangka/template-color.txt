@@ -1,0 +1,33 @@
+Background-color body #16003B
+background-sidebar #5800FF / rgb(88, 0, 255)
+color font #EFFFFD hover #85F4FF
+Color 
+
+font
+<link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Roboto+Slab&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+font-family: 'Mouse Memoirs', sans-serif;
+font-family: 'Roboto Slab', serif;
+
+<table>
+                    <tr>
+                        <td>NAMA</td>
+                        <td>: <span class="ngetik-nama"></span></td>
+                    </tr>
+                    <tr>
+                        <td>TEMPAT, TANGGAL LAHIR</td>
+                        <td>: <span class="ngetik-ttd"></span></td>
+                    </tr>
+                    <tr>
+                        <td>ALAMAT</td>
+                        <td>: <span class="ngetik-alamat"></span></td>
+                    </tr>
+                    <tr>
+                        <td>NO. HP</td>
+                        <td>: <span class="ngetik-hp"></span></td>
+                    </tr>
+                    <tr>
+                        <td>EMAIL</td>
+                        <td>: <span class="ngetik-email"></span></td>
+                    </tr>
+                </table>

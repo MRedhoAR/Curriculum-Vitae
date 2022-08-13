@@ -1,0 +1,660 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #16003B;
+    font-family: 'Roboto Slab', serif;
+}
+header{
+    height: 70px;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style-type: none;
+}
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+.container::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+header h1{
+    display: block;
+    float: left;
+    padding: 19px 30px;
+    font-size: 27px;
+    font-family: 'Mouse Memoirs', sans-serif;
+}
+header h1 a {
+    color: #EFFFFD;
+    transition: .5s;
+}
+header h1 a:hover{
+    color: #85F4FF;
+}
+header ul {
+    float: right;
+}
+header ul li {
+    padding: 24px;
+    display: inline-block;
+    font-size: 13px;
+}
+header ul li a {
+    color: #EFFFFD;
+    transition: .5s;
+}
+header ul li a:hover{
+    color: #85F4FF;
+}
+#check{
+    display: none;
+}
+.mobile-menu {
+    float: right;
+    display: none;
+    color: #EFFFFD;
+    padding: 17.7px;
+}
+.mobile-menu:hover{
+    cursor: pointer;
+    color: #85F4FF;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -250px;
+    width: 245px;
+    background-color: rgb(88, 0, 255, .9);
+    transition: .8s;
+    z-index: 9;
+}
+.sidebar ul{
+    margin-top: 30%;
+    list-style-type: none;
+}
+.sidebar ul li{
+    padding: 25px;
+    text-align: center;
+    transition: .5s;
+}
+.sidebar ul li:hover{
+    background-color: #16003B;
+}
+.sidebar ul li a{
+    color: #EFFFFD;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+.banner-left img{
+    float: right;
+    margin-right: 50px;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.banner-left .profil{
+    float: left;
+    margin-left: 50px;
+    margin-top: 88.5px;
+}
+.banner-left .profil h1{
+    color: #85F4FF;
+    font-family: 'Mouse Memoirs', sans-serif;
+    padding: 15px 0px;
+    font-size: 60px;
+}
+.banner-left .profil table tr td{
+    font-family: 'Roboto Slab', serif;
+    font-size: 19px;
+    color: #EFFFFD;
+}
+.banner-left .profil table tr td span{
+    color: #85F4FF;
+}
+
+section h3{
+    padding-bottom: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    color: #EFFFFD;
+}
+section h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+    height: 1px;
+    background-color: #7F8487;
+    opacity: 0.2;
+    left: calc(50% - 90px);
+}
+section h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 90px;
+    height: 3px;
+    background-color: #FF1700;
+    left: calc(50% - 45px);
+}
+#about p{
+    border-radius: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 50px;
+    padding: 20px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+    background-color: #5800FF;
+    color: #EFFFFD;
+}
+
+h3{
+    padding-bottom: 20px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    position: relative;
+    color: #EFFFFD;
+}
+h3::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 180px;
+    height: 1px;
+    background-color: #7F8487;
+    opacity: 0.2;
+    left: calc(50% - 90px);
+}
+h3::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 90px;
+    height: 3px;
+    background-color: #FF1700;
+    left: calc(50% - 45px);
+}
+.education .smk-edu{
+    position: relative;
+    border-radius: 10px;
+    background-color: #5800FF;
+    color: #EFFFFD;
+    float: left;
+    width: 35%;
+    text-align: center;
+    margin-left: 160px;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+.education .si-edu{
+    position: relative;
+    border-radius: 10px;
+    background-color: #5800FF;
+    color: #EFFFFD;
+    float: right;
+    width: 35%;
+    text-align: center;
+    margin-right: 160px;
+    padding: 10px 0;
+    margin-bottom: 50px;
+}
+.education h6{
+    padding-bottom: 10px;
+}
+.education .glow::before , .glow::after{
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: linear-gradient(45deg, #1363DF, #FF1E00, #2D31FA, #FF0063, #051367, #990000);
+    background-size: 400%;
+	width: 100%;
+	height: 100%;
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 400% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+.education .glow::after{
+    filter: blur(5px);
+}
+
+.magang .magang-sier{
+    border-radius: 10px;
+    background-color: #5800FF;
+    color: #EFFFFD;
+    float: left;
+    width: 35%;
+    text-align: center;
+    margin-left: 150px;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+.magang .magang-bbtklpp{
+    border-radius: 10px;
+    background-color: #5800FF;
+    color: #EFFFFD;
+    float: right;
+    width: 35%;
+    text-align: center;
+    margin-right: 150px;
+    padding: 10px 10px;
+    margin-bottom: 50px;
+}
+.magang .magang-bbtklpp h6, h4{
+    padding-bottom: 10px;
+}
+.magang .magang-sier h6, h4{
+    padding-bottom: 10px;
+}
+.magang p{
+    font-size: 13px;
+}
+
+.kerja{
+    margin-bottom: 50px;
+}
+.kerja ul{
+    display:flex;
+}
+.kerja ul li{
+    border-radius: 10px;
+    background-color: #5800FF;
+    color: #EFFFFD;
+    padding: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.kerja ul li h4, h6{
+    padding-bottom: 10px;
+}
+.kerja ul li p{
+    font-size: 13px;
+}
+
+.keahlian{
+    margin-bottom: 50px;
+}
+.keahlian h4, h5{
+    padding: 0px;
+    font-size: 15px;
+}
+.microsoft{
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    color: #EFFFFD;
+    background-color: #5800FF;
+    margin-right: 50%;
+    margin-left: 38.5%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.listrik{
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    color: #EFFFFD;
+    background-color: #5800FF;
+    margin-right: 50%;
+    margin-left: 35.6%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.adobe{
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    color: #EFFFFD;
+    background-color: #5800FF;
+    margin-right: 50%;
+    margin-left: 24.5%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.network{
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    color: #EFFFFD;
+    background-color: #5800FF;
+    margin-right: 50%;
+    margin-left: 23%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.pemrograman{
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    color: #EFFFFD;
+    background-color: #5800FF;
+    margin-right: 50%;
+    margin-left: 7.5%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.microsoft .tooltip{
+    visibility: hidden;
+    width: 100px;
+    color: #191919;
+    background-color: #06FF00;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -4%;
+    left: 120%;
+    margin-left: -5px;
+    opacity: 0;
+    transition: .5s;
+}
+.listrik .tooltip{
+    visibility: hidden;
+    width: 100px;
+    color: #191919;
+    background-color: #06FF00;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -4%;
+    left: 115%;
+    margin-left: -5px;
+    opacity: 0;
+    transition: .5s;
+}
+.adobe .tooltip{
+    visibility: hidden;
+    width: 100px;
+    color: #191919;
+    background-color: #06FF00;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -4%;
+    left: 109%;
+    margin-left: -5px;
+    opacity: 0;
+    transition: .5s;
+}
+.network .tooltip{
+    visibility: hidden;
+    width: 100px;
+    color: #191919;
+    background-color: #06FF00;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -4%;
+    left: 109%;
+    margin-left: -5px;
+    opacity: 0;
+    transition: .5s;
+}
+.pemrograman .tooltip{
+    visibility: hidden;
+    width: 100px;
+    color: #191919;
+    background-color: #06FF00;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: -4%;
+    left: 106%;
+    margin-left: -5px;
+    opacity: 0;
+    transition: .5s;
+}
+.microsoft:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+.listrik:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+.adobe:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+.network:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+.pemrograman:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
+.tooltip::after{
+    content: "";
+    position: absolute;
+    top: 35%;
+    right: 105%;
+    margin-top: -6px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #06FF00 transparent transparent;
+}
+.porto{
+    background: linear-gradient(315deg, #ffff 0%, #d7e1ec 74%);
+    margin-left: calc(50% - 68px);
+}
+.porto .button{
+    display: block;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 0 5px;
+    background: #5800FF;
+    overflow: hidden;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0,1);
+    margin-bottom: 50px;
+    transition: all .3s ease-out;
+}
+.porto .button:hover{
+    width: 200px;
+}
+.porto .button .icon{
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    text-align: center;
+    transition: all .3s ease-out;
+}
+.porto .button:nth-child(1):hover .icon{
+    background: #333;
+}
+.porto .button:nth-child(2):hover .icon{
+    background: #E1306C;
+}
+.porto .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all .3s ease-out;
+}
+.porto .button:hover .icon i{
+    color: #fff;
+}
+.porto .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all .3s ease-out;
+}
+.porto .button:nth-child(1) span{
+    color: #333;
+}
+.porto .button:nth-child(2) span{
+    color: #E1306C;
+}
+
+.colom{
+    width: 33.33%;
+    box-sizing: border-box;
+    float: left;
+    text-align: center;
+    padding: 40px 10px;
+    color: #EFFFFD;
+}
+.colom h4{
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(255, 23, 0, .4);
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: rgb(240, 235, 227, .3);
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+    color: #748DA6;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/*Setting Mobile*/
+@media (max-width: 768px){
+    .mobile-menu{
+        display: block;
+    }
+    header ul {
+        display: none;
+    }
+    .banner-left{
+        width: 407px;
+    }
+    .banner-left img{
+        margin: auto;
+        width: 400px;
+        height: 300px;
+        -moz-transform: scaleX(1);
+        -o-transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    .banner-left .profil{
+        margin: auto;
+    }
+    .banner-left .profil h1{
+        font-size: 30px;
+        padding: 20px 140px;
+    }
+    .banner-left .profil table tr td{
+        font-size: 13px;
+        padding: 0px 15px;
+    }
+    .education .smk-edu{
+        margin-left: 30px;
+        width: 330px;
+    }
+    .education .si-edu{
+        margin-left: 30px;
+        width: 330px;
+        float: left;
+    }
+    .magang .magang-sier{
+        margin-left: 30px;
+        width: 330px;
+    }
+    .magang .magang-bbtklpp{
+        margin-left: 30px;
+        width: 330px;
+        float: left;
+    }
+    .kerja ul{
+        display: block;
+    }
+    .microsoft{
+        margin-right: 35%;
+        margin-left: 0%;
+    }
+    .listrik{
+        margin-right: 35%;
+        margin-left: 0%;
+    }
+    .adobe{
+        margin-right: 35%;
+        margin-left: 0%;
+    }
+    .network{
+        margin-right: 35%;
+        margin-left: 0%;
+    }
+    .pemrograman{
+        margin-right: 35%;
+        margin-left: 0%;
+    }
+    .microsoft .tooltip{
+        left: 110%;
+    }
+    .listrik .tooltip{
+        left: 110%;
+    }
+    .adobe .tooltip{
+        left: 110%;
+        bottom: 18%;
+    }
+    .network .tooltip{
+        left: 110%;
+        bottom: 18%;
+    }
+    .pemrograman .tooltip{
+        left: 110%;
+        bottom: 24%;
+    }
+    .porto{
+        margin-left: 0;
+    }
+    .colom{
+        width: 300px;
+        margin-left: calc(50% - 152px);
+    }
+}
